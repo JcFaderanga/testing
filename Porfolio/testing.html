@@ -1,0 +1,431 @@
+<DOCTYPE html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+   JC Faderanga
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--------------------------------------------->
+                   <!--ICONS-->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!--------------------------------------------->
+
+    <!--------------------------------------------->
+                   <!--FONTS-->
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700&display=swap');
+
+    *{
+  padding:0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: poppins;
+  
+}
+body{
+
+
+  /* background: #040404; */
+  
+}
+#particle-js{
+  position: absolute;
+  width: 100%;
+height: 100%;
+background:  white; 
+
+}
+main{
+
+}
+
+/* nav bar */
+.navbar{
+width:100%;
+height: auto;
+position: fixed;
+bottom: 0;
+display: flex;
+justify-content: center;
+-webkit-animation: 8.2s both;
+}
+.nav-content{
+width: 100%;
+height: 50px;
+background: white;
+border-top: 1px solid rgba(0,0,0,0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.navbar nav ul li a{
+color: #323232;
+font-size: 20px;
+padding: 15px 45%;
+
+
+
+}
+.navbar nav ul li{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+
+}
+.navbar nav ul{
+    display: flex;
+    width: 100%;
+    height: 100%;
+  justify-content: space-around;
+
+}
+#li-home{
+  background: #323232;
+      
+}
+#home{
+    color: white;
+}
+
+/* main content home */
+.main-container{
+  position: absolute;
+  width: 100%;
+  height: auto;
+    top: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main-content-home{
+  width: 100%;
+    color: #323232;
+    text-shadow: 5px 5px 2px rgba(0,0,0,0.2);
+}
+.profile-img, .profile-name{
+  display: flex;
+  justify-content: center;
+
+}
+.profile{
+  width: 150px;
+  border: 3px solid rgba(0,0,0,0.7);
+  animation: profile 8s ease-in-out infinite 1s;
+
+}
+@keyframes profile{
+  0%{
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50%{
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100%{
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+.main-content-home h1{
+font-weight: 600;
+
+}
+.profile-img{
+margin: 20px;
+}
+.description{
+color: #323232;
+width: 100%;
+height: auto;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+font-size: 20px;
+margin-top: 20px;
+}
+
+/* social media link list */
+.main-link{
+  
+}
+.main-link ul::after{
+content: '';
+width: 50px;
+border: 1px solid #323232;
+margin-left: 10px;
+}
+.main-link ul::before{
+content: '';
+width: 50px;
+border: 1px solid #323232;
+margin-right: 10px;
+}
+
+.main-link ul{
+margin-top: 20px; 
+display: flex;
+width: 100%;
+height: auto;
+align-items: center;
+justify-content: center;
+
+}
+.main-link ul li {
+margin: 0 5px;
+
+}
+
+.main-link ul li a{
+font-size: 30px;
+color: #323232;
+
+
+}
+
+    </style>
+    <!--------------------------------------------->
+
+  <!--------------------------------------------->
+                  <!--MAIN CSS-->
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="pc-main.css"> 
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!--------------------------------------------->
+
+</head>
+<body >
+  <div id="particle-js"></div>
+
+    <header>
+      <div class="navbar">
+        <nav class="nav-content">
+          <ul>
+            <li id="li-home">
+              <a href="#" id="home" onclick="home()"><i class='bx bx-home'></i></a>
+            </li>
+
+            <li id="li-profile">
+              <a href="#" id="profile" onclick="profile()"><i class='bx bx-user'></i></a>
+            </li>
+
+            <li id="li-studies">
+              <a href="#" id="studies" onclick="studies()"><i class='bx bx-book-bookmark'></i></a>
+            </li>
+
+            <li id="li-message">
+              <a href="#" id="message" onclick="message()"><i class='bx bx-chat'></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+  <main>
+    <div class="main-container"> 
+        <div class="main-content-home">
+             <div class="profile-img">
+               <img class="profile" src="profile2.jpg" alt="profile">
+             </div>
+             <div class="name-des-pc">
+             <div class="profile-name">
+               <h1> JC Faderanga</h1>
+             </div> 
+               <div class="description">
+                <span>Aspiring <span style="font-weight: 700">Web Developer</span> from Philippines</span>
+               </div>
+              </div>
+        </div>
+    
+          <div class="main-link">
+         
+            <ul>
+             
+               <li>
+                 <a href="https://www.facebook.com/janreycyril.faderanga"> <i class='bx bxl-facebook-circle' ></i> </a>
+              </li>
+              <li>
+                 <a href="https://github.com/JcFaderanga"> <i class='bx bxl-instagram-alt'></i> </a>
+              </li>
+              <li>
+                 <a href="https://www.instagram.com/jeysi_faderanga/"> <i class='bx bxl-github'></i> </a>
+              </li>
+            </ul>
+         </div>
+   </div>
+
+  </main>
+  </div>
+  <script src="particle.js"></script>
+  <script type="text/javascript">
+    
+    function home() {
+      document.getElementById('li-home').style.background="#323232";
+      document.getElementById('home').style.color="white";
+
+      document.getElementById('li-profile').style.background="";
+      document.getElementById('profile').style.color="";
+      document.getElementById('studies').style.color="";
+      document.getElementById('message').style.color="";
+    }
+    function profile() {
+      document.getElementById('li-home').style.background="white";
+      document.getElementById('home').style.color="#323232";
+
+      document.getElementById('li-profile').style.background="#323232";
+      document.getElementById('profile').style.color="#fff";
+      document.getElementById('studies').style.color="";
+      document.getElementById('message').style.color="";
+    }
+    function studies() {
+      document.getElementById('li-home').style.background="white";
+      document.getElementById('li-home').style.color="#323232";
+
+      document.getElementById('li-profile').style.background="white";
+      document.getElementById('profile').style.color="#323232";
+
+      document.getElementById('studies').style.color="white";
+      document.getElementById('li-studies').style.background="#323232";
+
+      document.getElementById('home').style.color="#cbf7ed";
+      document.getElementById('profile').style.color="";
+      
+      document.getElementById('message').style.color="";
+    }
+    function message() {
+      document.getElementById('home').style.color="#cbf7ed";
+      document.getElementById('profile').style.color="";
+      document.getElementById('studies').style.color="";
+      document.getElementById('message').style.color="green";
+    }
+
+particlesJS("particle-js", 
+{
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#000000"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.3,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 5,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#000000",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true,
+  "config_demo": {
+    "hide_card": false,
+    "background_color": "white",
+    "background_image": "",
+    "background_position": "50% 50%",
+    "background_repeat": "no-repeat",
+    "background_size": "cover"
+  }
+})
+
+
+  </script>
+
+</body>
+</html>
